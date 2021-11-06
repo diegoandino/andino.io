@@ -7,12 +7,12 @@ about.addEventListener('click', () => {
   const aboutBox = new WinBox({
     title: 'About Me',
     modal: true,
-    width: '450px',
+    width: '50%',
     height: '400px',
-    top: 50,
-    right: 50,
-    bottom: 50,
-    left: 50,
+    top: 0,
+    right: 0,
+    bottom: 0,
+    left: 0,
     mount: aboutContent,
     onfocus: function () {
       this.setBackground('rgba(0, 0, 0, 0.7)')
@@ -27,12 +27,12 @@ contact.addEventListener('click', () => {
   const contactBox = new WinBox({
     title: 'Contact Me',
     modal: true,
-    width: '450px',
+    width: '50%',
     height: '400px',
-    top: 50,
-    right: 50,
-    bottom: 50,
-    left: 50,
+    top: 0,
+    right: 0,
+    bottom: 0,
+    left: 0,
     mount: contactContent,
     onfocus: function () {
       this.setBackground('rgba(0, 0, 0, 0.7)')

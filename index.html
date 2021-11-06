@@ -6,62 +6,68 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/media_queries.css" />
   <title>Welcome</title>
   <link rel="shortcut icon" href="https://img.icons8.com/fluent/48/000000/code.png" type="image/svgx-icon">
 </head>
 
 <body>
-  <div class="container">
-  <div class="row">
-    <img src="https://img.icons8.com/emoji/48/000000/green-circle-emoji.png">
-    <img src="https://img.icons8.com/emoji/48/000000/orange-circle-emoji.png">
-    <img src="https://img.icons8.com/emoji/48/000000/red-circle-emoji.png">
-  </div>
-    <nav>
-      <ul>
-        <li id="about">/about</li>
-        <li id="contact">/contact</li>
-      </ul>
+  <div id="nav">
+    <nav class="top-bar">
+      <img class="apple" src="img/apple.ico"/>
     </nav>
-
-    <main>
-      <h1>diegoandino:<span class="root-dollar">~$</span><span class="cursor">|</span></h1>
-      <h3>Find me online:</h3>
-      <ul>
-        <li>
-          <a href="https://github.com/diegoandino" target="_blank">/Github</a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/diego-andino-97b482183/" target="_blank">/LinkedIn</a>
-        </li>
-        <li>
-          <a href="img/DiegoAndino-Resume.pdf" target="_blank">/Resume</a>
-        </li> 
-      </ul>
-    </main>
   </div>
-
-  <div class="hidden">
-    <div id="about-content">
-      <h2>diegoandino:<span class="root-dollar">~/about-me$</span><span class="cursor">|</span></h2>
-      <p>My name's Diego Andino, a Software Engineer located in the Salt Lake City area</p>
-      <p>
-        Some of the languages that I am fluent in include C#, JavaScript, Java, C++ and GO
-      </p>
+  <div class="parent-container">
+    <div class="container" id="winbox-info">
+      <div class="row">
+        <img src="https://img.icons8.com/emoji/48/000000/green-circle-emoji.png">
+        <img src="https://img.icons8.com/emoji/48/000000/orange-circle-emoji.png">
+        <img src="https://img.icons8.com/emoji/48/000000/red-circle-emoji.png">
+      </div>
+      <nav>
+        <ul></ul>
+      </nav>
+      <main class="main">
+        <h1>diegoandino:<span class="root-dollar">~$  </span><span class="ls-text">andino.io</span><span class="cursor">|</span></h1>
+        <ul>
+          <li>
+            <a href="https://github.com/diegoandino" target="_blank">/GitHub</a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/diego-andino-97b482183/" target="_blank">/LinkedIn</a>
+          </li>
+          <li>
+            <a href="img/DiegoAndino-Resume.pdf" target="_blank">/Resume</a>
+          </li>
+          <li>
+            <a href="./code_demos.html" target="_blank">/Code Samples</a>
+          </li>
+          <li id="about">.about</li>
+          <li id="contact">.contact</li>
+        </ul>
+      </main>
     </div>
-
-    <div id="contact-content">
-      <h2>diegoandino:<span class="root-dollar">~/contact-me$</span><span class="cursor">|</span></h2>
-      <p>You can contact me at the email and phone number below</p>
-      <ul>
-        <li>Phone: 787-405-1522</li
-        <li>Email: andino.diego98@gmail.com</li>
-      </ul>
+    <div class="hidden">
+      <div id="about-content">
+        <h2>diegoandino:<span class="root-dollar">~/about-me$</span><span class="cursor">|</span></h2>
+        <p>My name's Diego Andino, a Software Engineer located in the Salt Lake City area.</p>
+        <p>
+          Some of the languages that I am profficient in include:<br>C#, C++, JavaScript, Java and GO.
+        </p>
+      </div>
+  
+      <div id="contact-content">
+        <h2>diegoandino:<span class="root-dollar">~/contact-me$</span><span class="cursor">|</span></h2>
+        <p>You can contact me at the email and phone number below</p>
+        <ul>
+          <li>Phone: <a href="tel:7874051522">787-405-1522</a></li>
+          <li>Email: <a href="mailto:andino.diego98@gmail.com">andino.diego98@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
     </div>
   </div>
-
   <script src="js/winbox.bundle.js"></script>
   <script src="js/main.js"></script>
 </body>
-
 </html>
