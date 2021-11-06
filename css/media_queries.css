@@ -1,5 +1,12 @@
 /* MEDIA QUERIES */
 
+@media (max-width: 2562px) {
+    .main {
+        transform: scale(1.2);
+        left: 200px;
+    }
+}
+
 @media (max-width: 1024px) {
     body {
         font-size: 34px;
@@ -49,19 +56,37 @@
         font-size: 16px;
     }
 
-    .container {
-        max-width: 380px;
+    .code-demo-parent-container {
+        display: contents;   
+    }
+
+    .terminal-header {
+        display: none;
+    }
+
+    .main {
+        margin-left: -3rem;
+    }
+
+    .parent-container {
+        display:grid;
+        align-items:center;
+    }
+
+    .container {      
+        width: 120%;
         margin-top: 35%;
-        height: 55vh;
+        right: 100rem;
+        height: 60vh;
     }    
 
     h1 {
-        font-size: 33px;
+        font-size: 29px;
         letter-spacing: -2px;
     }
 
     .row {
-        transform: scale(0.5);
+        transform: scale(0.4);
         right: -20px;
     }
 }

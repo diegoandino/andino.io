@@ -78,6 +78,11 @@ nav ul li {
   height: auto;
 }
 
+#about, #contact {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .carousel-text {
   color: #abb3be;
   margin-left: 4rem;
@@ -197,12 +202,15 @@ nav ul li {
   display: flex;
   justify-self: flex-start;
   align-items: flex-start;
+  height: 32px;
 }
 
-.apple {
-  margin: 4px 4px 6px 4px; 
+.arch {
+  /*margin: 4px 4px 6px 4px;*/
   transform: scale(0.8);
-  opacity: 0.85;
+  opacity: 1;
+  text-decoration: none;
+  font-size: 0; 
 }
 
 .ls-text {
