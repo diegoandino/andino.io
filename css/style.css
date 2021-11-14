@@ -108,7 +108,6 @@ nav ul li {
 
 .row {
   position: absolute;
-  top: 0px;
   right: 0px;
   transform: scale(0.55); 
 }
@@ -144,7 +143,7 @@ nav ul li {
 }
 
 .main {
-  margin-left: -25%;
+  margin-left: -22%;
   margin-top: 7%;
 }
 
