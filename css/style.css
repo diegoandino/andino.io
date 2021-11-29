@@ -145,6 +145,7 @@ nav ul li {
 .main {
   margin-left: -22%;
   margin-top: 7%;
+  height: auto;
 }
 
 .winbox {
