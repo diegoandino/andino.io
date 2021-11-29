@@ -203,15 +203,16 @@ nav ul li {
   display: flex;
   justify-self: flex-start;
   align-items: flex-start;
-  height: 32px;
+  height: 40px;
 }
 
-.arch {
+.apple {
   /*margin: 4px 4px 6px 4px;*/
-  transform: scale(0.8);
+  transform: scale(0.9);
   opacity: 1;
   text-decoration: none;
   font-size: 0; 
+  margin-left: 5px;
 }
 
 .ls-text {
