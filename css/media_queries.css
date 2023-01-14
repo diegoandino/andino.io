@@ -160,8 +160,31 @@ and (min-height: 720px) and (max-height: 770px) {
     }
 }
 
+@media (min-width: 377px) and (max-width: 384px) {
+    body {
+        font-size: 16px;
+    }
+
+    .main {
+        margin-left: -4.5rem;
+        margin-top: 3rem;
+    }
+
+    .parent-container {
+        display: grid;
+        padding-top: 20%;
+        grid-template-columns: repeat(auto-fit, 360px);
+        grid-template-rows: repeat(2, 100px);
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
+
+
 /* iPhone 13/14 Pro (and Max) Range */
-@media (min-width: 385px) and (max-width: 430px)
+@media (min-width: 385px) and (max-width: 450px)
 and (min-height: 840px) and (max-height: 930px) {
     body {
         font-size: 18px;
@@ -187,42 +210,6 @@ and (min-height: 840px) and (max-height: 930px) {
         font-size: 24px;
     }
 }
-
-
-@media (max-width: 416px) {
-    body {
-        font-size: 16px;
-    }
-
-    .main {
-        margin-left: -4.5rem;
-        margin-top: 4rem;
-    }
-
-    .parent-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, 380px);
-        grid-template-rows: repeat(2, 100px);
-    }
-
-    .carousel-text {
-        font-size: 25px;
-    }
-
-    #code-carousel-mobile {
-        top: 6rem;
-    }
-
-    .container {
-        height: 65vh;
-    }
-
-    h1 {
-        font-size: 23px;
-        letter-spacing: -2px;
-    }
-}
-
 
 @media (max-width: 376px) {
     body {
