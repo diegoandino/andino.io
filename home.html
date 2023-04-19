@@ -1,73 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media_queries.css" />
+    <title>$HOME</title>
+    <link
+      rel="shortcut icon"
+      href="https://img.icons8.com/fluent/48/000000/code.png"
+      type="image/svgx-icon"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/media_queries.css" />
-  <title>$HOME</title>
-  <link rel="shortcut icon" href="https://img.icons8.com/fluent/48/000000/code.png" type="image/svgx-icon">
-</head>
-
-<body>
-  <div id="nav">
-    <nav class="top-bar">
-      <a href="./home.html"><img class="apple" src="img/apple.ico" /></a>  
-    </nav>
-  </div>
-  <div class="parent-container">
-    <div class="container" id="winbox-info">
-      <div class="row">
-        <img src="https://img.icons8.com/emoji/48/000000/green-circle-emoji.png">
-        <img src="https://img.icons8.com/emoji/48/000000/orange-circle-emoji.png">
-        <img src="https://img.icons8.com/emoji/48/000000/red-circle-emoji.png">
-      </div>
-      <nav>
-        <ul></ul>
+  <body>
+    <div id="nav">
+      <nav class="top-bar">
+        <!-- <a href="./home.html"><img class="apple" src="img/apple.ico" /></a> -->
+        <div class="nav-pages">
+          <a class="nav-page" href="./home.html">I</a>
+          <h4 class="nav-divider">|</h4>
+          <a class="nav-page" href="./home.html">II</a>
+          <h4 class="nav-divider">|</h4>
+          <a class="nav-page" href="./home.html">III</a>
+        </div>
+        <h4><span id="datetime"></span></h4>
+        <script>
+          var span = document.getElementById("datetime");
+          function time() {
+            var d = new Date();
+            var s = d.getSeconds();
+            var m = d.getMinutes();
+            var h = d.getHours();
+            span.textContent =
+              ("0" + h).substr(-2) +
+              ":" +
+              ("0" + m).substr(-2) +
+              ":" +
+              ("0" + s).substr(-2);
+          }
+          setInterval(time, 1000);
+        </script>
       </nav>
-      <main class="main">
-        <h1>diegoandino:<span class="root-dollar">~$  </span><span class="ls-text">andino.io</span><span class="cursor">|</span></h1>
-        <ul>
-          <li>
-            <a href="https://github.com/diegoandino" target="_blank">/GitHub</a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/diego-andino-97b482183/" target="_blank">/LinkedIn</a>
-          </li>
-          <li>
-            <a href="img/DiegoAndino-Resume.pdf" target="_self">/Resume</a>
-          </li>
-          <li>
-            <a href="./code_demos.html" target="_self">/Code_Demos</a>
-          </li>
-          <li id="about">.about</li>
-          <li id="contact">.contact</li>
-        </ul>
-      </main>
     </div>
-    <div class="hidden">
-      <div id="about-content">
-        <h2 class="terminal-header">diegoandino:<span class="root-dollar">~$ </span><span class="ls-text">ls -a \about_me</span><span class="cursor">|</span></h2>
-        <p>My name's Diego Andino, a Software Engineer located in Salt Lake City, Utah.</p>
-        <p>
-          My languages of choice are:<br>C#, C++, JavaScript, Java and GO.
-        </p>
+    <div class="parent-container">
+      <div class="container" id="winbox-info">
+        <nav>
+          <ul></ul>
+        </nav>
+        <main class="main">
+          <h1>
+            diegoandino<span class="ls-text">@andino.io:</span
+            ><span class="root-dollar">~$ ls -a</span><span class="cursor">|</span>
+          </h1>
+          <ul>
+            <li>
+              <a href="https://github.com/diegoandino" target="_blank"
+                >/GitHub</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/diego-andino-97b482183/"
+                target="_blank"
+                >/LinkedIn</a
+              >
+            </li>
+            <li>
+              <a href="img/DiegoAndino-Resume.pdf" target="_self">/Resume</a>
+            </li>
+            <li id="about">.about</li>
+            <li id="contact">.contact</li>
+          </ul>
+        </main>
       </div>
-  
-      <div id="contact-content">
-        <h2 class="terminal-header">diegoandino:<span class="root-dollar">~$ </span><span class="ls-text">ls -a \contact_me</span><span class="cursor">|</span></h2>
-        <p>You can contact me at the phone number and/or email below</p>
-        <ul>
-          <li><a href="tel:7874051522">801-696-6211</a></li>
-          <li><a href="mailto:andino.diego98@gmail.com">andino.diego98@gmail.com</a></li>
-        </ul>
+      <div class="hidden">
+        <div id="about-content">
+          <h2 class="terminal-header">
+            diegoandino@<span class="ls-text">andino.io:</span
+            ><span class="root-dollar">~$ cat .about</span
+            ><span class="cursor">|</span>
+          </h2>
+          <p>
+            My name's Diego Andino, a Software Engineer located in Salt Lake
+            City, Utah
+          </p>
+          <p>
+            My languages of choice are:<br />C#, JavaScript, Typescript, GO and
+            Rust
+          </p>
+        </div>
+
+        <div id="contact-content">
+          <h2 class="terminal-header">
+            diegoandino<span class="ls-text">@andino.io:</span
+            ><span class="root-dollar">~$ cat .contact</span
+            ><span class="cursor">|</span>
+          </h2>
+          <p>You can contact me at the phone number and/or email below:</p>
+          <ul>
+            <li><a href="tel:7874051522">801-696-6211</a></li>
+            <li>
+              <a href="mailto:andino.diego98@gmail.com"
+                >andino.diego98@gmail.com</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="child-container-1">
+        <div class="sub-child-container-1" id="winbox-info">
+          <nav>
+            <ul></ul>
+          </nav>
+          <main class="main">
+            <pre class="ascii">
+                    _   _                       _         
+                   | | (_)                     (_)        
+ __ _   _ __     __| |  _   _ __     ___        _    ___  
+/  _`| | '_ \   / _` | | | | '_ \   / _ \      | |  / _ \ 
+| (_|| | | | | | (_| | | | | | | | | (_) |  _  | | | (_) |
+\__,_| |_| |_|  \__,_| |_| |_| |_|  \___/  (_) |_|  \___/ 
+            </pre>
+          </main>
+        </div>
+      </div>
+
+      <div class="child-container-2">
+        <div class="sub-child-container-2" id="winbox-info">
+          <nav>
+            <ul></ul>
+          </nav>
+          <main class="main">
+            <h1 class="neofetch-window-host">
+              diegoandino<span class="ls-text">@andino.io:</span
+              ><span class="root-dollar">~$ </span
+              ><span class="ls-text">neofetch</span
+              ><span class="cursor">|</span>
+            </h1>
+            <div class="ascii-2">
+              <pre class="ascii-2-text-logo">
+              .-/+oossssoo+/-.
+          `:+ssssssssssssssssss+:`
+        -+ssssssssssssssssssyyssss+-
+      .ossssssssssssssssssdMMMNysssso.
+     /ssssssssssshdmmNNmmyNMMMMhssssss/
+    +ssssssssshmydMMMMMMMNddddyssssssss+
+   /sssssssshNMMMyhhyyyyhmNMMMNhssssssss/
+  .ssssssssdMMMNhsssssssssshNMMMdssssssss.
+  +sssshhhyNMMNyssssssssssssyNMMMysssssss+
+  ossyNMMMNyMMhsssssssssssssshmmmhssssssso
+  ossyNMMMNyMMhsssssssssssssshmmmhssssssso
+  +sssshhhyNMMNyssssssssssssyNMMMysssssss+
+  .ssssssssdMMMNhsssssssssshNMMMdssssssss.
+   /sssssssshNMMMyhhyyyyhdNMMMNhssssssss/
+    +sssssssssdmydMMMMMMMMddddyssssssss+
+     /ssssssssssshdmNNNNmyNMMMMhssssss/
+      .ossssssssssssssssssdMMMNysssso.
+        -+sssssssssssssssssyyyssss+-
+          `:+ssssssssssssssssss+:`
+              .-/+oossssoo+/-.
+              </pre>
+              <pre class="ascii-2-text-info">
+                diegoandino@andino.io
+                -----------------------
+                OS: Ubuntu 20.04.5 LTS
+                Kernel: x86_64 Linux 5.4.0-88-generic
+                Uptime: 2 days, 19 hours, 10 mins
+                Packages: 974 (dpkg)
+                Shell: zsh 5.8
+                Theme: Gruvbox
+                Icons: Gruvbox
+                Terminal: Kitty
+                CPU: Intel i7-9700K (8) @ 3.600GHz
+                GPU: NVIDIA GeForce RTX 2080 SUPER
+                Memory: 336MiB / 7911MiB
+              </pre>
+            </div>
+          </main>
+        </div>
       </div>
     </div>
-    </div>
-  </div>
-  <script src="js/winbox.bundle.js"></script>
-  <script src="js/main.js"></script>
-</body>
+    <script src="js/winbox.bundle.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
