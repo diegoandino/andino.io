@@ -217,7 +217,7 @@
   
   .parent-container {
     display: grid;
-    margin-left: 32.2rem;
+    margin-left: 32.5rem;
     padding-top: 30%;
     grid-template-columns: repeat(auto-fit, 360px);
     grid-template-rows: repeat(2, 100px);
@@ -260,7 +260,7 @@
   
   .parent-container {
     display: grid;
-    margin-left: 31.5rem;
+    margin-left: 32.6rem;
     padding-top: 30%;
     grid-template-columns: repeat(auto-fit, 360px);
     grid-template-rows: repeat(2, 100px);
@@ -284,6 +284,7 @@
     visibility: hidden;
   }
 }
+
 
 /* Galaxy 8 */
 @media only screen and (max-width: 541px) and (max-height: 750px) {
