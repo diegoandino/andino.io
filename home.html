@@ -2,10 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/media_queries.css" />
     <title>$HOME</title>
     <link
       rel="shortcut icon"
@@ -13,173 +11,214 @@
       type="image/svgx-icon"
     />
   </head>
-
   <body>
-    <div id="nav">
-      <nav class="top-bar">
-        <!-- <a href="./home.html"><img class="apple" src="img/apple.ico" /></a> -->
-        <div class="nav-pages">
-          <a class="nav-page" href="./home.html">I</a>
-          <h4 class="nav-divider">|</h4>
-          <a class="nav-page" href="./home.html">II</a>
-          <h4 class="nav-divider">|</h4>
-          <a class="nav-page" href="./home.html">III</a>
-        </div>
-        <h4><span id="datetime"></span></h4>
-        <script>
-          var span = document.getElementById("datetime");
-          function time() {
-            var d = new Date();
-            var s = d.getSeconds();
-            var m = d.getMinutes();
-            var h = d.getHours();
-            span.textContent =
-              ("0" + h).substr(-2) +
-              ":" +
-              ("0" + m).substr(-2) +
-              ":" +
-              ("0" + s).substr(-2);
-          }
-          setInterval(time, 1000);
-        </script>
-      </nav>
+    <div class="top-bar">
+      <h4><span id="datetime"></span></h4>
+      <script>
+        var span = document.getElementById("datetime");
+        function time() {
+          var d = new Date();
+          var s = d.getSeconds();
+          var m = d.getMinutes();
+          var h = d.getHours();
+          span.textContent =
+            ("0" + h).substr(-2) +
+            ":" +
+            ("0" + m).substr(-2) +
+            ":" +
+            ("0" + s).substr(-2);
+        }
+        setInterval(time, 1000);
+      </script>
     </div>
-    <div class="parent-container">
-      <div class="container" id="winbox-info">
-        <nav>
-          <ul></ul>
-        </nav>
-        <main class="main">
-          <h1>
-            diegoandino<span class="ls-text">@andino.io:</span
-            ><span class="root-dollar">~$ ls -a</span><span class="cursor">|</span>
-          </h1>
-          <ul>
-            <li>
-              <a href="https://github.com/diegoandino" target="_blank"
-                >/GitHub</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/diego-andino-97b482183/"
-                target="_blank"
-                >/LinkedIn</a
-              >
-            </li>
-            <li>
-              <a href="img/DiegoAndino-Resume.pdf" target="_self">/Resume</a>
-            </li>
-            <li id="about">.about</li>
-            <li id="contact">.contact</li>
-          </ul>
-        </main>
-      </div>
-      <div class="hidden">
-        <div id="about-content">
-          <h2 class="terminal-header">
-            diegoandino@<span class="ls-text">andino.io:</span
-            ><span class="root-dollar">~$ cat .about</span
-            ><span class="cursor">|</span>
-          </h2>
-          <p>
-            My name's Diego Andino, a Software Engineer located in Salt Lake
-            City, Utah
-          </p>
-          <p>
-            My languages of choice are:<br />C#, JavaScript, Typescript, GO and
-            Rust
-          </p>
-        </div>
+    <div class="grid-container">
+      <div class="window window1">
+        <div class="parent-container">
+          <div class="container" id="winbox-info">
+            <main class="main">
+              <h1>
+                diegoandino<span class="ls-text">@andino.io:~$</span
+                ><span class="root-dollar">ls -a</span
+                ><span class="cursor">|</span>
+              </h1>
+              <ul>
+                <li>
+                  <a href="https://github.com/diegoandino" target="_blank"
+                    >/GitHub</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/diego-andino-97b482183/"
+                    target="_blank"
+                    >/LinkedIn</a
+                  >
+                </li>
+                <li>
+                  <a href="img/DiegoAndino-Resume.pdf" target="_self"
+                    >/Resume</a
+                  >
+                </li>
+                <li id="about">.about</li>
+                <li id="contact">.contact</li>
+              </ul>
+            </main>
+          </div>
+          <div class="hidden">
+            <!-- About content -->
+            <div class="hidden-content" id="about-content">
+              <h2 class="terminal-header">
+                diegoandino@<span class="ls-text">andino.io:~$</span
+                ><span class="root-dollar">cat .about</span
+                ><span class="cursor">|</span>
+              </h2>
+              <p>
+                My name's Diego Andino, a Software Engineer located in Salt Lake
+                City, Utah
+              </p>
+              <p>My languages of choice are:<br /></p>
+              <ul>
+                <li>Golang</li>
+                <li>C#</li>
+                <li>JavaScript</li>
+                <li>Typescript</li>
+              </ul>
+            </div>
 
-        <div id="contact-content">
-          <h2 class="terminal-header">
-            diegoandino<span class="ls-text">@andino.io:</span
-            ><span class="root-dollar">~$ cat .contact</span
-            ><span class="cursor">|</span>
-          </h2>
-          <p>You can contact me at the phone number and/or email below:</p>
-          <ul>
-            <li><a href="tel:8016966211">801-696-6211</a></li>
-            <li>
+            <!-- Contact content -->
+            <div class="hidden-content" id="contact-content">
+              <h2 class="terminal-header">
+                diegoandino<span class="ls-text">@andino.io:~$</span
+                ><span class="root-dollar">cat .contact</span
+                ><span class="cursor">|</span>
+              </h2>
+              <p>You can contact me at my email below:</p>
               <a href="mailto:andino.diego98@gmail.com"
                 >andino.diego98@gmail.com</a
               >
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
       </div>
+      <div class="window window2">
+        <div class="parent-container">
+          <div class="container">
+            <main class="main">
+              <h1 class="neofetch-window-host">
+                diegoandino<span class="ls-text">@andino.io:</span
+                ><span class="root-dollar">~$ </span
+                ><span class="ls-text">neofetch</span
+                ><span class="cursor">|</span>
+              </h1>
+              <div class="ascii-2-parent">
+                <div class="ascii-2-text-logo-parent">
+                  <pre class="ascii-2-text-logo">
 
-      <div class="child-container-1">
-        <div class="sub-child-container-1" id="winbox-info">
-          <nav>
-            <ul></ul>
-          </nav>
-          <main class="main">
-            <pre class="ascii">
+                      ---.           ,-----,       --,
+                      /\\\\\           \OOO0\      /OO0\
+                      \/\\\\\           \OOO0\    /OOOO\
+                       \/\\\\\           \OOO0\  /OOOO/
+                        \/\\\\\           \OOO0\/OOOO/
+                  -------\/\\\\\---------  \OOOOOOOO/
+                 ///////////////////////\\  \OOOOOO/
+                /\\\\\\\\\\\\\\\\\\\\\\\\\\  \OOOO0\
+               ****************************   \00000\
+                                               \OOO00\
+                      ,-----                    \O0000\    \
+                     /OOOOO/                     \00000/  /\\
+                    /OOOOO/                       \000/  /\\\\
+                   /0OOOO/                         \0/  /\\\\/`
+                  /00OOO/                           /  /\\\\//
+    ,-===========/000OO/                              //\\\//
+    \0000OOOOOOOOOOOOO/                              //\\\//
+     \00000OOOOOOOOOO/                              //\\\/---------
+      `*******/OOOOO/                              /\\\\\\\\\\\\\\\\
+             /OOOOO/                              /\\\\\////////////;
+            /OOOOO/                              /\\\\/************'
+           /0OOOO/  \                           /\\\\//
+          \00OOO/  *\\                         /\\\\//
+           \000/  *///\                       /\\\\//
+            \0/  */////\                     /\\\\//
+             `    */////\                   *******
+                   */////\
+                    */////\  =============================
+                     */////\  \000OOOOOOOOOOOOOOOOOOOOOO/
+                     ///////\  \00000OOOOOOOOOO0000OOOO/
+                    /////////\  `********`\OOOO\*******
+                   ////\\//\//\            \OOOO\
+                  ////\\/ \/\//\            \0OOO\
+                 ////\\/   \/\//\            \00OO\
+                 *//\\/     \/\//\            \0000\
+                  ****       ``***`            ****
+                    </pre
+                  >
+                </div>
+                <div class="ascii-2-text-info-parent">
+                  <pre class="ascii-2-text-info">
+  diegoandino@andino.io
+  -----------------------
+  OS: NixOS 23.05
+  Kernel: x86_64 Linux 6.5.6
+  Shell: zsh 5.8
+  Theme: Gruvbox
+  Terminal: Kitty
+  Text Editor: Neovim
+  -----------------------
+  Fun Fact: I'm not a front-end dev
+  
+                    </pre
+                  >
+                  <div class="gruvbox-colors">
+                    <div class="color" style="background-color: #282828"></div>
+                    <!-- Color 0 -->
+                    <div class="color" style="background-color: #cc241d"></div>
+                    <!-- Color 1 -->
+                    <div class="color" style="background-color: #98971a"></div>
+                    <!-- Color 2 -->
+                    <div class="color" style="background-color: #d79921"></div>
+                    <!-- Color 3 -->
+                    <div class="color" style="background-color: #458588"></div>
+                    <!-- Color 4 -->
+                    <div class="color" style="background-color: #b16286"></div>
+                    <!-- Color 5 -->
+                    <div class="color" style="background-color: #689d6a"></div>
+                    <!-- Color 6 -->
+                    <div class="color" style="background-color: #a89984"></div>
+                    <!-- Color 7 -->
+                    <div class="color" style="background-color: #928374"></div>
+                    <!-- Color 8 -->
+                    <div class="color" style="background-color: #fb4934"></div>
+                    <!-- Color 9 -->
+                    <div class="color" style="background-color: #b8bb26"></div>
+                    <!-- Color 10 -->
+                    <div class="color" style="background-color: #fabd2f"></div>
+                    <!-- Color 11 -->
+                    <div class="color" style="background-color: #83a598"></div>
+                    <!-- Color 12 -->
+                    <div class="color" style="background-color: #d3869b"></div>
+                    <!-- Color 13 -->
+                    <div class="color" style="background-color: #8ec07c"></div>
+                    <!-- Color 14 -->
+                    <div class="color" style="background-color: #ebdbb2"></div>
+                    <!-- Color 15 -->
+                  </div>
+                </div>
+              </div>
+            </main>
+          </div>
+        </div>
+      </div>
+      <div class="window window3">
+        <div class="container">
+          <pre class="ascii">
                     _   _                       _         
                    | | (_)                     (_)        
  __ _   _ __     __| |  _   _ __     ___        _    ___  
 /  _`| | '_ \   / _` | | | | '_ \   / _ \      | |  / _ \ 
 | (_|| | | | | | (_| | | | | | | | | (_) |  _  | | | (_) |
 \__,_| |_| |_|  \__,_| |_| |_| |_|  \___/  (_) |_|  \___/ 
-            </pre>
-          </main>
-        </div>
-      </div>
-
-      <div class="child-container-2">
-        <div class="sub-child-container-2" id="winbox-info">
-          <nav>
-            <ul></ul>
-          </nav>
-          <main class="main">
-            <h1 class="neofetch-window-host">
-              diegoandino<span class="ls-text">@andino.io:</span
-              ><span class="root-dollar">~$ </span
-              ><span class="ls-text">neofetch</span
-              ><span class="cursor">|</span>
-            </h1>
-            <div class="ascii-2">
-              <pre class="ascii-2-text-logo">
-              .-/+oossssoo+/-.
-          `:+ssssssssssssssssss+:`
-        -+ssssssssssssssssssyyssss+-
-      .ossssssssssssssssssdMMMNysssso.
-     /ssssssssssshdmmNNmmyNMMMMhssssss/
-    +ssssssssshmydMMMMMMMNddddyssssssss+
-   /sssssssshNMMMyhhyyyyhmNMMMNhssssssss/
-  .ssssssssdMMMNhsssssssssshNMMMdssssssss.
-  +sssshhhyNMMNyssssssssssssyNMMMysssssss+
-  ossyNMMMNyMMhsssssssssssssshmmmhssssssso
-  ossyNMMMNyMMhsssssssssssssshmmmhssssssso
-  +sssshhhyNMMNyssssssssssssyNMMMysssssss+
-  .ssssssssdMMMNhsssssssssshNMMMdssssssss.
-   /sssssssshNMMMyhhyyyyhdNMMMNhssssssss/
-    +sssssssssdmydMMMMMMMMddddyssssssss+
-     /ssssssssssshdmNNNNmyNMMMMhssssss/
-      .ossssssssssssssssssdMMMNysssso.
-        -+sssssssssssssssssyyyssss+-
-          `:+ssssssssssssssssss+:`
-              .-/+oossssoo+/-.
-              </pre>
-              <pre class="ascii-2-text-info">
-                diegoandino@andino.io
-                -----------------------
-                OS: Ubuntu 20.04.5 LTS
-                Kernel: x86_64 Linux 5.4.0-88-generic
-                Uptime: 2 days, 19 hours, 10 mins
-                Packages: 974 (dpkg)
-                Shell: zsh 5.8
-                Theme: Gruvbox
-                Icons: Gruvbox
-                Terminal: Kitty
-                CPU: Intel i7-9700K (8) @ 3.600GHz
-                GPU: NVIDIA GeForce RTX 2080 SUPER
-                Memory: 336MiB / 7911MiB
-              </pre>
-            </div>
-          </main>
+            </pre
+          >
         </div>
       </div>
     </div>

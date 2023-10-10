@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap');
 
-* {
-  box-sizing: border-box;
-  padding: 0;
+body, html {
   margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Roboto Mono', sans-serif;
+  background-image: url("../img/linux.jpg");
+  color: var(--text-color);
+  background-size: cover;
 }
 
 :root {
@@ -12,32 +16,12 @@
   --text-color: #e1d6a9; 
 }
 
-body {
-  font-family: 'Roboto Mono', sans-serif;
-  /*background-color: rgba(27, 27, 27, 1);*/
-  background-image: url("../img/linux.jpg");
-  color: var(--text-color);
-  font-size: 25px;
-  line-height: 1.6;
-}
-
 h1 {
   color: var(--link-color);
-  font-size: 35px;
-  letter-spacing: -3px;
-  margin-top: 30px;
 }
 
 h2 {
   color: var(--link-color);
-}
-
-h3 {
-  margin-bottom: 10px;
-}
-
-ul {
-  list-style-type: none;
 }
 
 a {
@@ -45,232 +29,145 @@ a {
   text-decoration: none;
 }
 
-p {
-  margin: 20px 0;
-}
-
-nav {
-  width: 30%;
-}
-
-nav ul {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-nav ul li {
-  color: var(--link-color);
-  cursor: pointer;
-}
-
-.neofetch-window-host {
-  font-size: 1.8rem;
+#datetime {
+  color: var(--text-color);
 }
 
 .top-bar {
-  width: 100%;
-  background: rgba(50, 48, 47, 0.9);
-  display: flex;
-  justify-content: space-between;
-  height: 40px;
-}
-
-.top-bar-icons {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 10%;
-  margin-right: 1%;
-}
-
-.wifi-icon {
-  width: 40px;
-  height: 40px;
-}
-
-.bottom-bar-icons {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 10%;
-  margin-right: 1%;
-}
-
-.nav-time {
+  background: #333;
+  color: #fff;
   text-align: center;
+  height: 40px;  /* or whatever height you find suitable */
+  line-height: 40px;  /* this will help center the text vertically */
+  padding: 0 10px;  /* adding some padding on left and right for spacing */
+  box-sizing: border-box;  /* to ensure padding doesn't increase the height */
 }
 
-#winbox-info {
-  float: left;
+.top-bar h4 {
+  margin: 0;  /* removing default margin */
+  font-size: 16px;  /* or whatever font size you find suitable */
 }
 
-#winbox-coderef {
-  float: right;
-}
-
-#code-carousel {
-  width: 80%;
-  height: auto;
-}
-
-#about, #contact {
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.carousel-text {
-  color: #abb3be;
-  margin-left: 4rem;
-  font-family: 'Source Code Pro';
-}
-
-.code-demo-parent-container {
-  width: 100%;
-  overflow: hidden;
+.grid-container {
   display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-template-rows: repeat(3, auto);
+  height: calc(100vh - 40px); /* Considering top bar height */
+  gap: 2%; /* Adjust gap as per your requirements */
+  grid-template-areas:
+    "a a a b b"
+    "a a a b b"
+    "a a a c c";
+}
+
+.window {
+  background: #eee;
+  border: 2px solid #666;
+  display: flex;
   align-items: center;
-  padding: 1% 20% 0 20%;
-}
-
-#datetime {
-  color: #d5c4a1;
-}
-
-.footer {
-  width: 100%;
-}
-
-.bottom-bar {
-  width: 100%;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  background: rgba(50, 48, 47, 0.9);
-  display: flex;
   justify-content: center;
-  height: 40px;
-}
-
-#nav {
-  display: grid;
-}
-
-.nav-pages {
-  display: flex;
-  margin-left: 0.5%;
-}
-
-.nav-page {
-  padding: 0 1%;
-  color: #d5c4a1;
-}
-
-.nav-divider {
-  height: 100%;
-}
-
-.parent-container {
-  display: grid;
-  padding-top: 3%;
-  padding-left: 2%;
-  
-  grid-column-start: 1;
-  grid-column-end: 2;
-  gap: 50px;
-
-  justify-content: left;
-  grid-template-columns: repeat(auto-fit, 900px);
-  grid-template-rows: repeat(auto-fit, 100px);
-}
-
-.container {
-  width: 100%;
-  margin: auto;
-  height: 85vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-
+  font-size: 2rem;
   background-color: rgba(50, 48, 47, 0.9);  
   backdrop-filter: blur(5px);
   outline: 4px solid #e1d6a9;
+  overflow: auto;
 }
 
-.child-container-1 {
-  padding-right: 2%;
-  justify-content: right;
-
-  grid-column-start: 2;
-  grid-column-end: 3;
-
-  grid-template-columns: repeat(auto-fit, 900px);
-  grid-template-rows: repeat(auto-fit, 100px);
+.window1 {
+  margin: 2rem 0 2rem 2rem;
+  grid-area: a;
 }
 
-.sub-child-container-1 {
-  width: 100%;
-  margin: auto;
-  height: 40vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  background-color: rgba(50, 48, 47, 0.9);  
-  backdrop-filter: blur(5px);
-  outline: 4px solid var(--text-color);
+.window2 {
+  margin: 2rem 2rem 0 0;
+  grid-area: b;
 }
 
-.child-container-2 {
-  padding-right: 2%;
-  justify-content: right;
-
-  grid-column-start: 2;
-  grid-column-end: 3;
-
-  grid-row-start: 1;
-  grid-row-end: 3;
-
-  grid-template-columns: repeat(auto-fit, 900px);
-  grid-template-rows: repeat(auto-fit, 100px);
+.window3 {
+  margin: 0 2rem 2rem 0;
+  grid-area: c;
 }
 
-.sub-child-container-2 {
-  width: 100%;
-  margin: auto;
-  height: 40vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  background-color: rgba(50, 48, 47, 0.9);  
-  backdrop-filter: blur(5px);
-  outline: 4px solid var(--text-color);
-}
-
-.code-demo-container {
-  width: 100%;
-  margin: auto;
-  margin-top: 3%;
-  height: 85vh;
+.ascii-2-parent {
   display: grid;
-  align-items: center;
-  background-color: rgba(40,44,52,255);  
-  backdrop-filter: blur(5px);
-
-  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.3); 
-  border-radius: 15px;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: auto;
 }
 
+.ascii-2-text-logo-parent {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.ascii-2-text-info-parent {
+  grid-column: 2 / 2;
+  grid-row: 1 / 2;
+}
+
+.ascii-2-text-logo {
+  font-size: 1rem;
+}
+
+.ascii-2-text-info {
+  font-size: 2rem;
+}
+
+.gruvbox-colors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 1rem;
+  margin-left: 2.5rem;
+}
+
+.color {
+  width: 75px;  /* adjust size as necessary */
+  height: 75px;
+  border-radius: 3px;  /* rounded edges for aesthetics */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);  /* slight shadow for depth */
+}
+
+.parent-container {
+  width: 100%;  /* Ensures it takes the full width of its parent */
+  height: 100%; /* Ensures it takes the full height of its parent */
+  overflow: auto; /* Allows scrolling if content exceeds window size */
+}
+
+.container {
+  padding: 1rem;
+}
+
+/* Making sure the main content fills the container */
 .main {
-  margin-left: -22%;
-  margin-top: 1%;
-  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;  /* Aligns items to the start */
+  overflow: auto;  /* Enables scrolling if content overflows */
 }
 
-.winbox {
-  border-radius: 5px;
+.main h1 {
+  font-size: 2rem;  /* Adjust font size as required */
+  display: flex;
+  align-items: center;
+}
+
+.main ul {
+  list-style-type: none; /* Removes bullet points */
+  padding: 0;
+}
+
+.main ul li {
+  margin-top: 0.5rem;
+}
+
+.ls-text, .root-dollar {
+  margin-right: 0.5rem;  /* Space between elements */
+  color: var(--text-color);  /* You can change this to adjust the color of the text */
+}
+
+.cursor {
+  animation: blink 1s infinite;  /* Makes the cursor blink */
 }
 
 .wb-body {
@@ -290,17 +187,14 @@ nav ul li {
   background-image: url("https://img.icons8.com/emoji/48/000000/red-circle-emoji.png");
 }
 
-.wb-full {
-  display: none;
+.wb-title {
+  color: var(--text-color);
+  font-family: 'Roboto Mono', sans-serif;
 }
 
-.hidden {
-  display: none;
-}
-
-.cursor {
-  font-weight: 700;
-  animation: 1s blink step-end infinite;
+pre {
+  display: inline-block;
+  font-family:'Courier New', Courier, monospace;
 }
 
 @keyframes blink {
@@ -314,53 +208,217 @@ nav ul li {
   }
 }
 
-.root-dollar {
-  color: var(--text-color);
+.hidden {
+  display: none;  /* Hide the content initially */
 }
 
-pre {
-  display: inline-block;
-  font-family:'Courier New', Courier, monospace;
+.hidden-content {
+  font-size: 1.5rem;
 }
 
-.ascii {
-  color: var(--text-color);
-  white-space: pre;
-  font-size: 1.2rem;
-  justify-content: center;
-  margin-left: 4%;
-  margin-top: 5%;
+.terminal-header {
+  font-size: 1.5rem;
 }
 
-.ascii-2 {
-  width: 100%;
-  margin-left: 2%;
-  display: table-row;
+/* Responsive behaviors */
+@media (max-width: 2500px) {
+  .window {
+    font-size: 2rem;
+  }
+
+  .ascii-2-text-logo {
+    font-size: 0.8rem;
+  }
+  
+  .ascii-2-text-info {
+    font-size: 1.5rem;
+  }
+
+  .gruvbox-colors {
+    margin-left: 2rem;
+  }
 }
 
-.ascii-2-text-logo {
-  font-size: 0.55rem;
-  color: var(--text-color);
-  display: table-cell;
-  text-align: justify;
+@media (max-width: 2000px) {
+  .ascii-2-text-logo {
+    font-size: 0.7rem;
+  }
+  
+  .ascii-2-text-info {
+    font-size: 1.2rem;
+  }
+
+  .gruvbox-colors {
+    margin-left: 1.5rem;
+  }
+
+  .ascii {
+    font-size: 1.5rem;
+  }
+
+  .color {
+    width: 50px;  /* adjust size as necessary */
+    height: 50px;
+  }
 }
 
-.ascii-2-text-info {
-  font-size: 0.75rem;
-  color: var(--text-color);
-  display: table-cell;
-  text-align: justify;
+@media (max-width: 1700px) {
+  .ascii-2-text-logo {
+    font-size: 0.5rem;
+  }
+  
+  .ascii-2-text-info {
+    font-size: 1rem;
+  }
+
+  .gruvbox-colors {
+    margin-left: 1.5rem;
+  }
+
+  .ascii {
+    font-size: 1.2rem;
+  }
+
+  .color {
+    width: 50px;  /* adjust size as necessary */
+    height: 50px;
+  }
 }
 
-.apple {
-  /*margin: 4px 4px 6px 4px;*/
-  transform: scale(0.9);
-  opacity: 1;
-  text-decoration: none;
-  font-size: 0; 
-  margin-left: 5px;
+@media (max-width: 1500px) {
+  body {
+    background-size: cover;
+  }
+  
+  .main {
+    font-size: 1.8rem;
+  }
+
+  .ascii-2-text-logo {
+    font-size: 0.3rem;
+  }
+  
+  .ascii-2-text-info {
+    font-size: 0.9rem;
+  }
+
+  .gruvbox-colors {
+    margin-left: 1.3rem;
+  }
+
+  .ascii {
+    font-size: 0.9rem;
+  }
+
+  .color {
+    width: 40px;
+    height: 40px;
+  }
+
+  .main h1 {
+    font-size: 1.6rem; 
+  }
 }
 
-.ls-text {
-  color: var(--text-color);
+@media (max-width: 1050px) {
+  body {
+    background-size: cover;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(3, auto);
+    height: calc(100vh - 40px); /* Considering top bar height */
+    gap: 2%; /* Adjust gap as per your requirements */
+    grid-template-areas:
+      "a"
+      "a"
+      "a";
+  }
+  
+  .window {
+    font-size: 1rem;
+  }
+
+  .main {
+    font-size: 2.5rem;
+  }
+
+  .main h1 {
+    font-size: 2.5rem; 
+  }
+
+  .window1 {
+    margin-right: 2rem;
+    grid-row: 1 / 3;
+  }
+
+  .window2 {
+    display: none;
+  }
+
+  .window3 {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .main {
+    font-size: 2rem; 
+  }
+  
+  .main h1 {
+    font-size: 2rem; 
+  }
+}
+
+@media (max-width: 600px) {
+  .window {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .window {
+    font-size: 1.2rem;
+  }
+
+  .main {
+    font-size: 1.5rem;
+  }
+
+  .main h1 {
+    font-size: 1rem; 
+  }
+
+  .hidden-content {
+    font-size: 0.9rem;
+  }
+
+  .terminal-header {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .window {
+    font-size: 1.2rem;
+  }
+
+  .main {
+    font-size: 1.5rem;
+  }
+
+  .main h1 {
+    font-size: 0.9rem; 
+  }
+
+  .hidden-content {
+    font-size: 0.8rem;
+  }
+
+  .terminal-header {
+    font-size: 0.6rem;
+  }
 }
