@@ -320,6 +320,37 @@ pre {
   }
 }
 
+@media (max-width: 1200px) {
+  .main {
+    font-size: 1.8rem;
+  }
+
+  .ascii-2-text-logo {
+    font-size: 0.3rem;
+  }
+  
+  .ascii-2-text-info {
+    font-size: 0.8rem;
+  }
+
+  .gruvbox-colors {
+    margin-left: 1.3rem;
+  }
+
+  .ascii {
+    font-size: 0.9rem;
+  }
+
+  .color {
+    width: 30px;
+    height: 30px;
+  }
+
+  .main h1 {
+    font-size: 1.4rem; 
+  }
+}
+
 @media (max-width: 1050px) {
   body {
     background-size: cover;
