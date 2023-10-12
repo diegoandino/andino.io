@@ -1,3 +1,3 @@
-# Diego Andino Portfolio Page
+# andino.io
 
-Personal portfolio page made with WinBox for a Terminal-like experience.
+Personal portfolio page made with WinBox.js for a terminal-like experience.
